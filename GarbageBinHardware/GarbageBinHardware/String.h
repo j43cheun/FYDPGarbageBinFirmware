@@ -19,9 +19,11 @@ public:
   String( const char *cstr );
   virtual ~String() {}
 
+  const bool BufferIsFull() const { return m_idx == MAX_BUFFER_SIZE; }
   const unsigned GetLength() const { return m_idx + 1; }
   const char *ToCString() const { return m_buf; }
 
+  void operator+=( const unsigned char charArg );
 private:
   char m_buf[ MAX_BUFFER_SIZE ];
   unsigned m_idx;

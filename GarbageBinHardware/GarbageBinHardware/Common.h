@@ -15,6 +15,4 @@
 #include <stdint-gcc.h>
 #include <util/delay.h>
 
-#include "String.h"
-
 #endif /* COMMON_H_ */

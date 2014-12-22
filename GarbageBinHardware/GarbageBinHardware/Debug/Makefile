@@ -38,7 +38,8 @@ SUBDIRS :=
 C_SRCS +=  \
 ../LCDDriver.cpp \
 ../Main.cpp \
-../String.cpp
+../String.cpp \
+../USARTDriver.cpp
 
 
 PREPROCESSING_SRCS += 
@@ -50,22 +51,26 @@ ASM_SRCS +=
 OBJS +=  \
 LCDDriver.o \
 Main.o \
-String.o
+String.o \
+USARTDriver.o
 
 OBJS_AS_ARGS +=  \
 LCDDriver.o \
 Main.o \
-String.o
+String.o \
+USARTDriver.o
 
 C_DEPS +=  \
 LCDDriver.d \
 Main.d \
-String.d
+String.d \
+USARTDriver.d
 
 C_DEPS_AS_ARGS +=  \
 LCDDriver.d \
 Main.d \
-String.d
+String.d \
+USARTDriver.d
 
 OUTPUT_FILE_PATH +=GarbageBinHardware.elf
 
@@ -78,6 +83,8 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 LIB_DEP+= 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

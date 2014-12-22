@@ -6,6 +6,7 @@
  */ 
 
 #include "LCDDriver.h"
+#include "String.h"
 
 // ATMEGA328P PDx PORTS
 #define REGISTER_SELECT_PIN               2
@@ -101,20 +102,21 @@ void LCD_PrintInteger( const int intData )
 
 void LCD_PrintMessage( const String msgData )
 {
-  const char *cstr = msgData.ToCString();
+  // const char *cstr = msgData.ToCString();
+  char *cstr = "hello world!";
   while( *cstr ) { LCD_SendChar( *cstr++ ); }
 }
 
 void LCD_PulseEnableLine()
 {
   // Set the LCD ENABLE line to HIGH.
-  PORTC |= ( 1 << ENABLE_PIN );
+  PORTD |= ( 1 << ENABLE_PIN );
 
   // Wait 40us.
   _delay_us( 40 );
 
   // Set the LCD ENABLE line to LOW.
-  PORTC &= ~( 1 << ENABLE_PIN );
+  PORTD &= ~( 1 << ENABLE_PIN );
 }
 
 void LCD_SendByte( const uint8_t byteData )
@@ -132,7 +134,7 @@ void LCD_SendChar( const uint8_t charData )
   PORTD |= ( 1 << REGISTER_SELECT_PIN );
 
   // Send the char data to the LCD.
-  LCD_SendChar( charData );
+  LCD_SendByte( charData );
 }
 
 void LCD_SendCommand( const uint8_t cmdData )

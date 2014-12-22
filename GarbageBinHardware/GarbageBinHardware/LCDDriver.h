@@ -10,6 +10,8 @@
 
 #include "Common.h"
 
+class String;
+
 void LCD_ClearDisplay();
 void LCD_Initialize();
 void LCD_PrintHex( const int hexData );

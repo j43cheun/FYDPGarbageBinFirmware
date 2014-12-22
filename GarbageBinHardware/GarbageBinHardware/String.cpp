@@ -25,6 +25,15 @@ String::String( const char *cstr ) : m_idx( 0 )
   m_buf[ m_idx ] = '\0';
 }
 
+void String::operator+=( const unsigned char charArg )
+{
+  if( m_idx < MAX_BUFFER_SIZE - 1 )
+  {
+    m_buf[m_idx++] = charArg;
+    m_buf[m_idx] = '\0';
+  }
+}
+
 void *operator new( size_t sizeInBytes )
 {
   void *const buf = malloc( sizeInBytes );

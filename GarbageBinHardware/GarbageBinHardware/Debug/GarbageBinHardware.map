@@ -29,40 +29,22 @@ Discarded input sections
  .group         0x00000000        0x8 LCDDriver.o
  .text          0x00000000        0x0 LCDDriver.o
  .bss           0x00000000        0x0 LCDDriver.o
- .text._ZN6StringD2Ev
-                0x00000000        0xc LCDDriver.o
- .text._ZN6StringD0Ev
-                0x00000000       0x10 LCDDriver.o
- .text._Z19LCD_PulseEnableLinev
-                0x00000000        0xe LCDDriver.o
- .text._Z12LCD_SendCharh
-                0x00000000        0x8 LCDDriver.o
- .text._Z16LCD_PrintMessage6String
-                0x00000000       0x1e LCDDriver.o
  .rodata.str1.1
-                0x00000000        0x3 LCDDriver.o
+                0x00000000       0x10 LCDDriver.o
+ .text._Z16LCD_PrintMessage6String
+                0x00000000       0x1a LCDDriver.o
  .text._Z12LCD_PrintHexi
                 0x00000000       0xe0 LCDDriver.o
  .text._Z16LCD_PrintIntegeri
                 0x00000000       0x4c LCDDriver.o
- .text._Z14LCD_SendNibbleh
-                0x00000000       0x1e LCDDriver.o
- .text._Z12LCD_SendByteh
-                0x00000000       0x16 LCDDriver.o
- .text._Z15LCD_SendCommandh
-                0x00000000        0x8 LCDDriver.o
  .text._Z16LCD_ClearDisplayv
                 0x00000000       0x14 LCDDriver.o
- .text._Z14LCD_Initializev
-                0x00000000       0x3e LCDDriver.o
  .text._Z15LCD_SetCursorTohh
                 0x00000000       0x24 LCDDriver.o
  .text._Z19LCD_SetCursorToHomev
                 0x00000000        0x8 LCDDriver.o
  .text._Z19LCD_SetCursorToLineh
                 0x00000000        0xa LCDDriver.o
- .rodata._ZTV6String
-                0x00000000        0x8 LCDDriver.o
  .text          0x00000000        0x0 Main.o
  .bss           0x00000000        0x0 Main.o
  .group         0x00000000        0x8 String.o
@@ -76,12 +58,21 @@ Discarded input sections
                 0x00000000       0x10 String.o
  .text._ZN6StringC2Ev
                 0x00000000       0x18 String.o
- .text._ZN6StringC2EPKc
-                0x00000000       0x60 String.o
+ .text._ZN6StringpLEh
+                0x00000000       0x2e String.o
  .text._Znwj    0x00000000        0x6 String.o
- .text._ZdlPv   0x00000000        0x6 String.o
  .rodata._ZTV6String
                 0x00000000        0x8 String.o
+ .text          0x00000000        0x0 USARTDriver.o
+ .bss           0x00000000        0x0 USARTDriver.o
+ .text._Z19USART_ByteAvailablev
+                0x00000000        0xc USARTDriver.o
+ .text._Z14USART_ReadBytev
+                0x00000000        0x6 USARTDriver.o
+ .text._Z17USART_ReceiveBytev
+                0x00000000       0x10 USARTDriver.o
+ .text._Z19USART_ReceiveStringhj
+                0x00000000       0x8e USARTDriver.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
@@ -114,9 +105,6 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
- .text.avr-libc
-                0x00000000      0x24e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
- COMMON         0x00000000        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
  .text.avr-libc
@@ -164,6 +152,7 @@ LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-
 LOAD LCDDriver.o
 LOAD Main.o
 LOAD String.o
+LOAD USARTDriver.o
 START GROUP
 LOAD c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -265,7 +254,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0xb0
+.text           0x00000000      0x4aa
  *(.vectors)
  .vectors       0x00000000       0x68 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vector_default
@@ -350,13 +339,57 @@ END GROUP
                 0x000000a2                __vector_20
                 0x000000a6                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x000000a6        0x6 Main.o
-                0x000000a6                main
-                0x000000ac                . = ALIGN (0x2)
+ .text._ZN6StringD2Ev
+                0x000000a6        0xc LCDDriver.o
+                0x000000a6                _ZN6StringD2Ev
+                0x000000a6                _ZN6StringD1Ev
+ .text._ZN6StringD0Ev
+                0x000000b2       0x10 LCDDriver.o
+                0x000000b2                _ZN6StringD0Ev
+ .text._Z19LCD_PulseEnableLinev
+                0x000000c2        0xe LCDDriver.o
+                0x000000c2                _Z19LCD_PulseEnableLinev
+ .text._Z14LCD_SendNibbleh
+                0x000000d0       0x1e LCDDriver.o
+                0x000000d0                _Z14LCD_SendNibbleh
+ .text._Z12LCD_SendByteh
+                0x000000ee       0x16 LCDDriver.o
+                0x000000ee                _Z12LCD_SendByteh
+ .text._Z12LCD_SendCharh
+                0x00000104        0x8 LCDDriver.o
+                0x00000104                _Z12LCD_SendCharh
+ .text._Z15LCD_SendCommandh
+                0x0000010c        0x8 LCDDriver.o
+                0x0000010c                _Z15LCD_SendCommandh
+ .text._Z14LCD_Initializev
+                0x00000114       0x3e LCDDriver.o
+                0x00000114                _Z14LCD_Initializev
+ .text.main     0x00000152       0x52 Main.o
+                0x00000152                main
+ .text._ZN6StringC2EPKc
+                0x000001a4       0x60 String.o
+                0x000001a4                _ZN6StringC2EPKc
+                0x000001a4                _ZN6StringC1EPKc
+ .text._ZdlPv   0x00000204        0x6 String.o
+                0x00000204                _ZdlPv
+ .text._Z10USART_Initv
+                0x0000020a       0x20 USARTDriver.o
+                0x0000020a                _Z10USART_Initv
+ .text._Z14USART_SendByteh
+                0x0000022a       0x10 USARTDriver.o
+                0x0000022a                _Z14USART_SendByteh
+ .text._Z16USART_SendStringPc
+                0x0000023a       0x1e USARTDriver.o
+                0x0000023a                _Z16USART_SendStringPc
+ .text.avr-libc
+                0x00000258      0x24e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00000258                malloc
+                0x00000388                free
+                0x000004a6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000ac        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
-                0x000000ac                _exit
-                0x000000ac                exit
+ .fini9         0x000004a6        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+                0x000004a6                _exit
+                0x000004a6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -375,17 +408,18 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000ac        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x000004a6        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000b0                _etext = .
+                0x000004aa                _etext = .
 
-.data           0x00800100        0x6 load address 0x000000b0
+.data           0x00800100       0x3a load address 0x000004aa
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 LCDDriver.o
  .data          0x00800100        0x0 Main.o
  .data          0x00800100        0x0 String.o
+ .data          0x00800100        0x0 USARTDriver.o
  .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_copy_data.o)
  .data          0x00800100        0x6 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
@@ -399,26 +433,35 @@ END GROUP
  *(.data*)
  *(.rodata)
  *(.rodata*)
+ .rodata._ZTV6String
+                0x00800106        0x8 LCDDriver.o
+                0x00800106                _ZTV6String
+ .rodata.str1.1
+                0x0080010e       0x2b Main.o
  *(.gnu.linkonce.d*)
-                0x00800106                . = ALIGN (0x2)
-                0x00800106                _edata = .
-                0x00800106                PROVIDE (__data_end, .)
+                0x0080013a                . = ALIGN (0x2)
+ *fill*         0x00800139        0x1 
+                0x0080013a                _edata = .
+                0x0080013a                PROVIDE (__data_end, .)
 
-.bss            0x00800106        0x0
-                0x00800106                PROVIDE (__bss_start, .)
+.bss            0x0080013a        0x4
+                0x0080013a                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
-                0x00800106                PROVIDE (__bss_end, .)
-                0x000000b0                __data_load_start = LOADADDR (.data)
-                0x000000b6                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080013a        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x0080013a                __brkval
+                0x0080013c                __flp
+                0x0080013e                PROVIDE (__bss_end, .)
+                0x000004aa                __data_load_start = LOADADDR (.data)
+                0x000004e4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800106        0x0
-                0x00800106                PROVIDE (__noinit_start, .)
+.noinit         0x0080013e        0x0
+                0x0080013e                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800106                PROVIDE (__noinit_end, .)
-                0x00800106                _end = .
-                0x00800106                PROVIDE (__heap_start, .)
+                0x0080013e                PROVIDE (__noinit_end, .)
+                0x0080013e                _end = .
+                0x0080013e                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -463,6 +506,7 @@ END GROUP
                                  0x31 (size before relaxing)
  .comment       0x00000000       0x31 Main.o
  .comment       0x00000000       0x31 String.o
+ .comment       0x00000000       0x31 USARTDriver.o
  .comment       0x00000000       0x31 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
 
 .note.gnu.build-id
@@ -480,55 +524,65 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf8
+.debug_aranges  0x00000000      0x150
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x90 LCDDriver.o
  .debug_aranges
                 0x00000090       0x20 Main.o
  .debug_aranges
-                0x000000b0       0x48 String.o
+                0x000000b0       0x50 String.o
+ .debug_aranges
+                0x00000100       0x50 USARTDriver.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x103e
+.debug_info     0x00000000     0x16bf
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xa3f LCDDriver.o
- .debug_info    0x00000a3f      0x1d5 Main.o
- .debug_info    0x00000c14      0x42a String.o
+ .debug_info    0x00000000      0xa6e LCDDriver.o
+ .debug_info    0x00000a6e      0x3b8 Main.o
+ .debug_info    0x00000e26      0x4b5 String.o
+ .debug_info    0x000012db      0x3e4 USARTDriver.o
 
-.debug_abbrev   0x00000000      0x6ba
+.debug_abbrev   0x00000000      0xa2b
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x310 LCDDriver.o
- .debug_abbrev  0x00000310      0x12e Main.o
- .debug_abbrev  0x0000043e      0x27c String.o
+ .debug_abbrev  0x00000000      0x30e LCDDriver.o
+ .debug_abbrev  0x0000030e      0x241 Main.o
+ .debug_abbrev  0x0000054f      0x2aa String.o
+ .debug_abbrev  0x000007f9      0x232 USARTDriver.o
 
-.debug_line     0x00000000      0x4b5
+.debug_line     0x00000000      0x6c9
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x2c7 LCDDriver.o
- .debug_line    0x000002c7       0x47 Main.o
- .debug_line    0x0000030e      0x1a7 String.o
+ .debug_line    0x000002c7      0x161 Main.o
+ .debug_line    0x00000428      0x1bb String.o
+ .debug_line    0x000005e3       0xe6 USARTDriver.o
 
-.debug_frame    0x00000000      0x1f0
+.debug_frame    0x00000000      0x2ec
  *(.debug_frame)
  .debug_frame   0x00000000      0x148 LCDDriver.o
- .debug_frame   0x00000148       0x24 Main.o
- .debug_frame   0x0000016c       0x84 String.o
+ .debug_frame   0x00000148       0x38 Main.o
+ .debug_frame   0x00000180       0x94 String.o
+ .debug_frame   0x00000214       0xd8 USARTDriver.o
 
-.debug_str      0x00000000      0x59d
+.debug_str      0x00000000      0x763
  *(.debug_str)
- .debug_str     0x00000000      0x51f LCDDriver.o
-                                0x564 (size before relaxing)
- .debug_str     0x0000051f       0x13 Main.o
-                                0x22d (size before relaxing)
- .debug_str     0x00000532       0x6b String.o
-                                0x2bf (size before relaxing)
+ .debug_str     0x00000000      0x567 LCDDriver.o
+                                0x5ac (size before relaxing)
+ .debug_str     0x00000567       0x56 Main.o
+                                0x34d (size before relaxing)
+ .debug_str     0x000005bd       0x73 String.o
+                                0x30f (size before relaxing)
+ .debug_str     0x00000630      0x133 USARTDriver.o
+                                0x3d8 (size before relaxing)
 
-.debug_loc      0x00000000      0x430
+.debug_loc      0x00000000      0x66e
  *(.debug_loc)
- .debug_loc     0x00000000      0x35c LCDDriver.o
- .debug_loc     0x0000035c       0xd4 String.o
+ .debug_loc     0x00000000      0x336 LCDDriver.o
+ .debug_loc     0x00000336       0x48 Main.o
+ .debug_loc     0x0000037e       0xd4 String.o
+ .debug_loc     0x00000452      0x21c USARTDriver.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -548,11 +602,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xc8
+.debug_ranges   0x00000000      0x110
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x80 LCDDriver.o
  .debug_ranges  0x00000080       0x10 Main.o
- .debug_ranges  0x00000090       0x38 String.o
+ .debug_ranges  0x00000090       0x40 String.o
+ .debug_ranges  0x000000d0       0x40 USARTDriver.o
 
 .debug_macro
  *(.debug_macro)
