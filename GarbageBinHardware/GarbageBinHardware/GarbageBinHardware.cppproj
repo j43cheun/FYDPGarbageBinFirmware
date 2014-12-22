@@ -121,6 +121,12 @@
     <Compile Include="Common.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="LCDDriver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCDDriver.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Main.cpp">
       <SubType>compile</SubType>
     </Compile>

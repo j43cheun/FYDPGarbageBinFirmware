@@ -36,6 +36,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../LCDDriver.cpp \
 ../Main.cpp \
 ../String.cpp
 
@@ -47,18 +48,22 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+LCDDriver.o \
 Main.o \
 String.o
 
 OBJS_AS_ARGS +=  \
+LCDDriver.o \
 Main.o \
 String.o
 
 C_DEPS +=  \
+LCDDriver.d \
 Main.d \
 String.d
 
 C_DEPS_AS_ARGS +=  \
+LCDDriver.d \
 Main.d \
 String.d
 
@@ -73,6 +78,8 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 LIB_DEP+= 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

@@ -9,81 +9,72 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   2 .comment      00000030  00000000  00000000  0000012a  2**0
                   CONTENTS, READONLY
-  3 .debug_aranges 00000068  00000000  00000000  0000015a  2**0
+  3 .debug_aranges 000000f8  00000000  00000000  0000015a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   0000045a  00000000  00000000  000001c2  2**0
+  4 .debug_info   0000103e  00000000  00000000  00000252  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 00000290  00000000  00000000  0000061c  2**0
+  5 .debug_abbrev 000006ba  00000000  00000000  00001290  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   000001e2  00000000  00000000  000008ac  2**0
+  6 .debug_line   000004b5  00000000  00000000  0000194a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  000000a8  00000000  00000000  00000a90  2**2
+  7 .debug_frame  000001f0  00000000  00000000  00001e00  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    0000024e  00000000  00000000  00000b38  2**0
+  8 .debug_str    0000059d  00000000  00000000  00001ff0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    000000d4  00000000  00000000  00000d86  2**0
+  9 .debug_loc    00000430  00000000  00000000  0000258d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000048  00000000  00000000  00000e5a  2**0
+ 10 .debug_ranges 000000c8  00000000  00000000  000029bd  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-String::String() : m_idx( 0 )
-{
-  m_buf[ m_idx ] = '\0';
+  // Wait for the LCD to initialize.
+  _delay_ms( 3 );
 }
 
-String::String( const char *cstr ) : m_idx( 0 )
+void LCD_PrintHex( const int hexData )
+{
    0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
    4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
    8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
    c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-{
-  unsigned idxLimit = MAX_BUFFER_SIZE - 1;
-
-  while( cstr[ m_idx ] && m_idx < idxLimit )
   18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
   1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+  // Convert hex data to ASCII.
+  itoa( hexData, hexDataCStrBuf, 16 );
+
+  // Print "0x" prefix.
+  String hexPrefix( "0x" );
   28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-  {
-    m_buf[ m_idx ] = cstr[ m_idx ];
-    m_idx++;
   2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-{
-  unsigned idxLimit = MAX_BUFFER_SIZE - 1;
 
-  while( cstr[ m_idx ] && m_idx < idxLimit )
-  {
-    m_buf[ m_idx ] = cstr[ m_idx ];
+#define MAX_BUFFER_SIZE 1000
+
+#include "Common.h"
+
+class String
   34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-    m_idx++;
   3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-
-String::String( const char *cstr ) : m_idx( 0 )
-{
-  unsigned idxLimit = MAX_BUFFER_SIZE - 1;
-
-  while( cstr[ m_idx ] && m_idx < idxLimit )
   40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-  {
-    m_buf[ m_idx ] = cstr[ m_idx ];
-    m_idx++;
-  }
-
-  m_buf[ m_idx ] = '\0';
   50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
-}
   58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
   60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
@@ -94,6 +85,7 @@ String::String( const char *cstr ) : m_idx( 0 )
   6a:	1f be       	out	0x3f, r1	; 63
   6c:	cf ef       	ldi	r28, 0xFF	; 255
   6e:	d8 e0       	ldi	r29, 0x08	; 8
+  LCD_PrintMessage( hexPrefix );
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
 
@@ -101,6 +93,9 @@ String::String( const char *cstr ) : m_idx( 0 )
   74:	11 e0       	ldi	r17, 0x01	; 1
   76:	a0 e0       	ldi	r26, 0x00	; 0
   78:	b1 e0       	ldi	r27, 0x01	; 1
+
+  // Print the hex data to LCD.
+  String hexDataStr( hexDataCStrBuf );
   7a:	e0 eb       	ldi	r30, 0xB0	; 176
   7c:	f0 e0       	ldi	r31, 0x00	; 0
   7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
@@ -130,14 +125,9 @@ String::String( const char *cstr ) : m_idx( 0 )
   a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000a6 <main>:
-#include "Common.h"
-
-int main()
-{
-  return 0;
-  a6:	80 e0       	ldi	r24, 0x00	; 0
-  a8:	90 e0       	ldi	r25, 0x00	; 0
-  aa:	08 95       	ret
+  a6:	8f ef       	ldi	r24, 0xFF	; 255
+  a8:	87 b9       	out	0x07, r24	; 7
+  aa:	ff cf       	rjmp	.-2      	; 0xaa <main+0x4>
 
 000000ac <_exit>:
   ac:	f8 94       	cli

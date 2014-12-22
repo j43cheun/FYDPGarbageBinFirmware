@@ -5,7 +5,6 @@
  *  Author: Justin
  */ 
 
-
 #ifndef STRING_H_
 #define STRING_H_
 
@@ -19,6 +18,10 @@ public:
   String();
   String( const char *cstr );
   virtual ~String() {}
+
+  const unsigned GetLength() const { return m_idx + 1; }
+  const char *ToCString() const { return m_buf; }
+
 private:
   char m_buf[ MAX_BUFFER_SIZE ];
   unsigned m_idx;
