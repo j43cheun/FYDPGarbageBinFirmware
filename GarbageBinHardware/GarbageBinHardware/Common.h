@@ -8,7 +8,10 @@
 #ifndef COMMON_H_
 #define COMMON_H_
 
-#define F_CPU 16000000L
+#define F_CPU            16000000L
+
+#define ClearBit( x, y ) x &= ~_BV( y );
+#define SetBit( x, y )   x |= _BV( y );
 
 #include <avr/io.h>
 #include <stdlib.h>

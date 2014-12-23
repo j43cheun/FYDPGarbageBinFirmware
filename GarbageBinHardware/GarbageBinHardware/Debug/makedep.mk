@@ -8,5 +8,7 @@ Main.cpp
 
 String.cpp
 
+TMP36GZDriver.cpp
+
 USARTDriver.cpp
 

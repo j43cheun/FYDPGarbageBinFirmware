@@ -1,5 +1,5 @@
-LCDDriver.d LCDDriver.o: .././LCDDriver.cpp .././LCDDriver.h \
- .././Common.h \
+TMP36GZDriver.d TMP36GZDriver.o: .././TMP36GZDriver.cpp \
+ .././TMP36GZDriver.h .././Common.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -18,7 +18,7 @@ LCDDriver.d LCDDriver.o: .././LCDDriver.cpp .././LCDDriver.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1056\avr8-gnu-toolchain\avr\include\math.h
 
-.././LCDDriver.h:
+.././TMP36GZDriver.h:
 
 .././Common.h:
 

@@ -1,189 +1,168 @@
 /*
  * LCDDriver.cpp
  *
- * Created: 2014-12-22 12:30:15 AM
+ * Created: 10/4/2014 9:39:20 PM
  *  Author: Justin
  */ 
 
 #include "LCDDriver.h"
-#include "String.h"
 
-// ATMEGA328P PDx PORTS
-#define REGISTER_SELECT_PIN               2
-#define ENABLE_PIN                        3
+#define LCD_CTRL_PORT        PORTD
+#define LCD_DATA_PORT        PORTC
 
-// ATMEGA328P PCx PORTS
-#define DATA_4_PIN                        2
-#define DATA_5_PIN                        3
-#define DATA_6_PIN                        4
-#define DATA_7_PIN                        5
+#define LCD_REGISTER_SELECT  2
+#define LCD_ENABLE           3
+#define LCD_DATA_4           2
+#define LCD_DATA_5           3
+#define LCD_DATA_6           4
+#define LCD_DATA_7           5
 
-// LCD COMMANDS
-#define CMD_CLEAR_DISPLAY                 0x01
-#define CMD_INIT_CONTROLLER               0x33
-#define CMD_SET_2_LINE_5X7_MATRIX         0x28
-#define CMD_SET_4_BIT_MODE                0x32
-#define CMD_SET_CURSOR                    0x80
-#define CMD_SET_CURSOR_DIRECTION_TO_RIGHT 0x06
-#define CMD_TURN_OFF_CURSOR               0x0C
-#define CMD_TURN_ON_CURSOR                0x0E
+#define LCD_CMD_CLEARDISPLAY 0x01
+#define LCD_CMD_SETCURSOR    0x80
 
-void LCD_ClearDisplay()
-{
-  // Send the command to clear the LCD display.
-  LCD_SendCommand( CMD_CLEAR_DISPLAY );
-
-  // Wait for the LCD to process the command.
-  _delay_ms( 3 );
-}
-
-void LCD_Initialize()
-{
-  // Set ports PD2 and PD3 as outputs.
-  DDRD |= ( 1 << REGISTER_SELECT_PIN ) |
-          ( 1 << ENABLE_PIN );
-
-  // Set ports PC4 to PC7 as outputs.
-  DDRC |= ( 1 << DATA_4_PIN ) |
-          ( 1 << DATA_5_PIN ) |
-          ( 1 << DATA_6_PIN ) |
-          ( 1 << DATA_7_PIN );
-
-  // Initialize the controller.
-  LCD_SendCommand( CMD_INIT_CONTROLLER );
-
-  // Set to 4-bit input mode.
-  LCD_SendCommand( CMD_SET_4_BIT_MODE );
-
-  // 2 line, 5 x 7 matrix.
-  LCD_SendCommand( CMD_SET_2_LINE_5X7_MATRIX );
-
-  // Turn the cursor off.
-  LCD_SendCommand( CMD_TURN_OFF_CURSOR );
-
-  // Set the cursor direction to RIGHT.
-  LCD_SendCommand( CMD_SET_CURSOR_DIRECTION_TO_RIGHT );
-
-  // Start with a clear display.
-  LCD_SendCommand( CMD_CLEAR_DISPLAY );
-
-  // Wait for the LCD to initialize.
-  _delay_ms( 3 );
-}
-
-void LCD_PrintHex( const int hexData )
-{
-  // Allocate space for result.
-  char hexDataCStrBuf[ 8 ];
-
-  // Convert hex data to ASCII.
-  itoa( hexData, hexDataCStrBuf, 16 );
-
-  // Print "0x" prefix.
-  String hexPrefix( "0x" );
-  LCD_PrintMessage( hexPrefix );
-
-  // Print the hex data to LCD.
-  String hexDataStr( hexDataCStrBuf );
-  LCD_PrintMessage( hexDataStr );
-}
-
-void LCD_PrintInteger( const int intData )
-{
-  // Allocate space for result.
-  char intDataCStrBuf[ 8 ];
-
-  // Convert int data to ASCII.
-  itoa( intData, intDataCStrBuf, 10 );
-
-  // Print the int data to LCD.
-  LCD_PrintMessage( intDataCStrBuf );
-}
-
-void LCD_PrintMessage( const String msgData )
-{
-  // const char *cstr = msgData.ToCString();
-  char *cstr = "hello world!";
-  while( *cstr ) { LCD_SendChar( *cstr++ ); }
-}
-
-void LCD_PulseEnableLine()
+void LCD_PulseEnableLine( void )
 {
   // Set the LCD ENABLE line to HIGH.
-  PORTD |= ( 1 << ENABLE_PIN );
+  SetBit( LCD_CTRL_PORT, LCD_ENABLE );
 
   // Wait 40us.
   _delay_us( 40 );
-
-  // Set the LCD ENABLE line to LOW.
-  PORTD &= ~( 1 << ENABLE_PIN );
-}
-
-void LCD_SendByte( const uint8_t byteData )
-{
-  // Set 4 MSB.
-  LCD_SendNibble( byteData );
-
-  // Set 4 LSB.
-  LCD_SendNibble( byteData << 4 );
-}
-
-void LCD_SendChar( const uint8_t charData )
-{
-  // Set LCD REGISTER SELECT line to 1 to send char data.
-  PORTD |= ( 1 << REGISTER_SELECT_PIN );
-
-  // Send the char data to the LCD.
-  LCD_SendByte( charData );
-}
-
-void LCD_SendCommand( const uint8_t cmdData )
-{
-  // Set LCD REGISTER SELECT line to 0 to send command data.
-  PORTD &= ~( 1 << REGISTER_SELECT_PIN );
-
-  // Send the command data to the LCD.
-  LCD_SendByte( cmdData );
-}
-
-void LCD_SendNibble( const uint8_t nibbleData )
-{
-  // Clear DATA lines.
-  PORTC &= ~( ( 1 << DATA_4_PIN ) |
-              ( 1 << DATA_5_PIN ) |
-              ( 1 << DATA_6_PIN ) |
-              ( 1 << DATA_7_PIN ) );
   
-  if( nibbleData & ( 1 << 4 ) ) { PORTC |= ( 1 << DATA_4_PIN ); }
-  if( nibbleData & ( 1 << 5 ) ) { PORTC |= ( 1 << DATA_5_PIN ); }
-  if( nibbleData & ( 1 << 6 ) ) { PORTC |= ( 1 << DATA_6_PIN ); }
-  if( nibbleData & ( 1 << 7 ) ) { PORTC |= ( 1 << DATA_7_PIN ); }
+  // Set the LCD ENABLE line to LOW.
+  ClearBit( LCD_CTRL_PORT, LCD_ENABLE );
+}
 
+void LCD_SendNibble( const byte data )
+{
+  // (0xC3)16 = (11000011)2 = Clear 4 data lines.
+  LCD_DATA_PORT &= 0xC3;
+  
+  if( data & _BV( 4 ) ) { SetBit( LCD_DATA_PORT, LCD_DATA_4 ); }
+  if( data & _BV( 5 ) ) { SetBit( LCD_DATA_PORT, LCD_DATA_5 ); }
+  if( data & _BV( 6 ) ) { SetBit( LCD_DATA_PORT, LCD_DATA_6 ); }
+  if( data & _BV( 7 ) ) { SetBit( LCD_DATA_PORT, LCD_DATA_7 ); }
+  
   // Clock the 4 bits into the controller.
   LCD_PulseEnableLine();
 }
 
-void LCD_SetCursorTo( const uint8_t rowIdx, const uint8_t colIdx )
+void LCD_SendByte( const byte data )
 {
-  uint8_t addr;
+  // Set 4 MSB.
+  LCD_SendNibble( data );
+  
+  // Send 4 LSB.
+  LCD_SendNibble( data << 4 );  
+}
 
-  switch( colIdx )
+void LCD_SendCmd( const byte cmd )
+{
+  // Set R/S line to 0 to send command data.
+  ClearBit( LCD_CTRL_PORT, LCD_REGISTER_SELECT );
+  
+  // Send the command data to the LCD.
+  LCD_SendByte( cmd );
+}
+
+void LCD_SendChar( const byte ch )
+{
+  // Set R/S line to 1 to send character data.
+  SetBit( LCD_CTRL_PORT, LCD_REGISTER_SELECT );
+  
+  // Send the character data to the LCD.
+  LCD_SendByte( ch );
+}
+
+void LCD_Init( void )
+{
+  // Set ports B0 to B5 as outputs.
+  DDRC = 0x3C;
+  DDRD = 0x0C;
+  
+  // Initialize the controller.
+  LCD_SendCmd( 0x33 );
+  
+  // Set to 4-bit input mode.
+  LCD_SendCmd( 0x32 );
+
+  // 2 line, 5 x 7 matrix.
+  LCD_SendCmd( 0x28 );
+
+  // Turn the cursor off. To turn on cursor, set to 0x0E.
+  LCD_SendCmd( 0x0C );
+  
+  // Set the cursor direction to RIGHT.
+  LCD_SendCmd( 0x06 );
+  
+  // Start with a clear display.
+  LCD_SendCmd( 0x01 );
+  
+  // Wait for the LCD to initialize.
+  _delay_ms( 3 );
+}
+
+void LCD_ClearDisplay( void )
+{
+  // Send the command to clear the LCD display.
+  LCD_SendCmd( LCD_CMD_CLEARDISPLAY );
+  
+  // Wait for the LCD to process the command.
+  _delay_ms( 3 );
+}
+
+void LCD_SetCursorToHome( void )
+{
+  LCD_SendCmd( LCD_CMD_SETCURSOR );
+}
+
+void LCD_SetCursorTo( const byte x, const byte y )
+{
+  byte addr;
+  
+  switch( y )
   {
     case 1: addr = 0x40; break;
     case 2: addr = 0x14; break;
     case 3: addr = 0x54; break;
     default: addr = 0; break;
   }
-
-  LCD_SendCommand( CMD_SET_CURSOR + addr + rowIdx );
+  
+  LCD_SendCmd( LCD_CMD_SETCURSOR + addr + x );
 }
 
-void LCD_SetCursorToHome()
+void LCD_SetCursorToLine( const byte row )
 {
-  LCD_SendCommand( CMD_SET_CURSOR );
+  LCD_SetCursorTo( 0, row );
 }
 
-void LCD_SetCursorToLine( const uint8_t rowIdx )
+void LCD_PrintMessage( const char *text )
 {
-  LCD_SetCursorTo( 0, rowIdx );
+  while( *text ) { LCD_SendChar( *text++ ); }
+}
+
+void LCD_PrintHex( const int data )
+{
+  // Allocate space for result.
+  char st[8] = "";
+  
+  // Convert data to ASCII hex.
+  itoa( data, st, 16 );
+  
+  // Prepend "0x" prefix.
+  LCD_PrintMessage( "0x" );
+  
+  // Print the data to LCD.
+  LCD_PrintMessage( st );
+}
+
+void LCD_PrintInteger( const int data )
+{
+  // Allocate space for the result.
+  char st[8] = "";
+  
+  // Convert data to ASCII.
+  itoa( data, st, 10 );
+  
+  // Print the data to LCD.
+  LCD_PrintMessage( st );
 }
