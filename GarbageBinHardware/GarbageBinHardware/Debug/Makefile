@@ -36,6 +36,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../HCSR04Driver.cpp \
 ../LCDDriver.cpp \
 ../Main.cpp \
 ../String.cpp \
@@ -50,6 +51,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+HCSR04Driver.o \
 LCDDriver.o \
 Main.o \
 String.o \
@@ -57,6 +59,7 @@ TMP36GZDriver.o \
 USARTDriver.o
 
 OBJS_AS_ARGS +=  \
+HCSR04Driver.o \
 LCDDriver.o \
 Main.o \
 String.o \
@@ -64,6 +67,7 @@ TMP36GZDriver.o \
 USARTDriver.o
 
 C_DEPS +=  \
+HCSR04Driver.d \
 LCDDriver.d \
 Main.d \
 String.d \
@@ -71,6 +75,7 @@ TMP36GZDriver.d \
 USARTDriver.d
 
 C_DEPS_AS_ARGS +=  \
+HCSR04Driver.d \
 LCDDriver.d \
 Main.d \
 String.d \
@@ -88,6 +93,8 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 LIB_DEP+= 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

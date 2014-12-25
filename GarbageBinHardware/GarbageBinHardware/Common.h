@@ -14,6 +14,7 @@
 #define SetBit( x, y )   x |= _BV( y );
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 #include <stdlib.h>
 #include <stdint-gcc.h>
 #include <util/delay.h>

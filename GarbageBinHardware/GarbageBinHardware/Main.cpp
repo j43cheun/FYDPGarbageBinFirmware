@@ -10,6 +10,7 @@
 #include "String.h"
 #include "USARTDriver.h"
 #include "TMP36GZDriver.h"
+#include "HCSR04Driver.h"
 
 #include <stdio.h>
 
@@ -42,11 +43,9 @@ int main()
   // LCD_PrintMessage( "Temp: 30" );
 
   TMP36GZ_Init();
-  
+  HCSR04_Init();
 
   char buf[100];
-
-  
 
   // DDRB = 0xFF;
   // PORTB = 0xFF;
@@ -56,7 +55,8 @@ int main()
   while( 1 )
   {
     float temperature = TMP36GZ_MeasureDegCTemperature();
-    sprintf(buf, "Temperature: %f\n", temperature);
+    float cmDistance = HCSR04_MeasureCmDistance( temperature );
+    sprintf(buf, "Temperature: %f Distance: %f cm\n", temperature, cmDistance);
     USART_SendString( buf );
     _delay_ms( 1000 );
   }
