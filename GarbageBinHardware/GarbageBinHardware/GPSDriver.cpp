@@ -20,11 +20,11 @@ GPSCoordinate GPS_GetCoordinate()
   while( gpsNotUpdated )
   {
     const char *recvbuf = USART_ReceiveString( '\n', 5 ).ToCString();
-    unsigned recvbufIdx = 0;
+    unsigned idx = 0;
 
-    while( recvbuf[ recvbufIdx ] )
+    while( recvbuf[ idx ] )
     {
-      GPS_tinyGPS.encode( recvbuf[ recvbufIdx++ ] );
+      GPS_tinyGPS.encode( recvbuf[ idx++ ] );
     }
 
     if( GPS_tinyGPS.location.isUpdated() || GPS_tinyGPS.altitude.isUpdated() )
