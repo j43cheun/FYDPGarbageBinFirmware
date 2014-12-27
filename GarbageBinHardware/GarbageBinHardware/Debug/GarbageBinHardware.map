@@ -703,7 +703,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x207e
+.text           0x00000000     0x208c
  *(.vectors)
  .vectors       0x00000000       0x68 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vector_default
@@ -801,199 +801,199 @@ END GROUP
                 0x0000021e       0x10 GPSDriver.o
                 0x0000021e                _ZN6StringD0Ev
  .text._Z17GPS_GetCoordinatev
-                0x0000022e       0xf8 GPSDriver.o
+                0x0000022e       0xe2 GPSDriver.o
                 0x0000022e                _Z17GPS_GetCoordinatev
  .text._Z8GPS_Initv
-                0x00000326        0x6 GPSDriver.o
-                0x00000326                _Z8GPS_Initv
+                0x00000310        0x6 GPSDriver.o
+                0x00000310                _Z8GPS_Initv
  .text._GLOBAL__sub_I_GPS_tinyGPS
-                0x0000032c        0xa GPSDriver.o
+                0x00000316        0xa GPSDriver.o
  .text.__vector_13
-                0x00000336       0x22 HCSR04Driver.o
-                0x00000336                __vector_13
+                0x00000320       0x22 HCSR04Driver.o
+                0x00000320                __vector_13
  .text.__vector_10
-                0x00000358       0x56 HCSR04Driver.o
-                0x00000358                __vector_10
- .text.main     0x000003ae       0xa6 Main.o
-                0x000003ae                main
+                0x00000342       0x56 HCSR04Driver.o
+                0x00000342                __vector_10
+ .text.main     0x00000398       0xca Main.o
+                0x00000398                main
  .text._ZN6StringC2Ev
-                0x00000454       0x18 String.o
-                0x00000454                _ZN6StringC1Ev
-                0x00000454                _ZN6StringC2Ev
+                0x00000462       0x18 String.o
+                0x00000462                _ZN6StringC1Ev
+                0x00000462                _ZN6StringC2Ev
  .text._ZN6StringpLEh
-                0x0000046c       0x2e String.o
-                0x0000046c                _ZN6StringpLEh
- .text._ZdlPv   0x0000049a        0x6 String.o
-                0x0000049a                _ZdlPv
+                0x0000047a       0x2e String.o
+                0x0000047a                _ZN6StringpLEh
+ .text._ZdlPv   0x000004a8        0x6 String.o
+                0x000004a8                _ZdlPv
  .text._Z10USART_Initv
-                0x000004a0       0x2e USARTDriver.o
-                0x000004a0                _Z10USART_Initv
+                0x000004ae       0x2e USARTDriver.o
+                0x000004ae                _Z10USART_Initv
  .text._Z19USART_ReceiveStringhj
-                0x000004ce       0x8e USARTDriver.o
-                0x000004ce                _Z19USART_ReceiveStringhj
+                0x000004dc       0x8e USARTDriver.o
+                0x000004dc                _Z19USART_ReceiveStringhj
  .text._Z14USART_SendByteh
-                0x0000055c       0x10 USARTDriver.o
-                0x0000055c                _Z14USART_SendByteh
+                0x0000056a       0x10 USARTDriver.o
+                0x0000056a                _Z14USART_SendByteh
  .text._Z16USART_SendStringPKc
-                0x0000056c       0x1e USARTDriver.o
-                0x0000056c                _Z16USART_SendStringPKc
+                0x0000057a       0x1e USARTDriver.o
+                0x0000057a                _Z16USART_SendStringPKc
  .text.avr-libc.fplib
-                0x0000058a        0xa c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x0000058a                __subsf3
-                0x0000058c                __addsf3
+                0x00000598        0xa c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00000598                __subsf3
+                0x0000059a                __addsf3
  .text.avr-libc.fplib
-                0x00000594       0xc0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x000005ae                __addsf3x
+                0x000005a2       0xc0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x000005bc                __addsf3x
  .text.avr-libc.fplib
-                0x00000654        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00000654                __divsf3
+                0x00000662        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00000662                __divsf3
  .text.avr-libc.fplib
-                0x00000658       0xcc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x0000066e                __divsf3x
-                0x00000672                __divsf3_pse
+                0x00000666       0xcc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x0000067c                __divsf3x
+                0x00000680                __divsf3_pse
  .text.avr-libc.fplib
-                0x00000724       0x7a c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00000724                __floatunsisf
-                0x00000728                __floatsisf
+                0x00000732       0x7a c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00000732                __floatunsisf
+                0x00000736                __floatsisf
  .text.avr-libc.fplib
-                0x0000079e        0xc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x0000079e                __fp_inf
+                0x000007ac        0xc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x000007ac                __fp_inf
  .text.avr-libc.fplib
-                0x000007aa        0x6 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x000007aa                __fp_nan
+                0x000007b8        0x6 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x000007b8                __fp_nan
  .text.avr-libc.fplib
-                0x000007b0        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x000007b0                __fp_pscA
+                0x000007be        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x000007be                __fp_pscA
  .text.avr-libc.fplib
-                0x000007be        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x000007be                __fp_pscB
+                0x000007cc        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x000007cc                __fp_pscB
  .text.avr-libc.fplib
-                0x000007cc       0x22 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x000007cc                __fp_round
+                0x000007da       0x22 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x000007da                __fp_round
  .text.avr-libc.fplib
-                0x000007ee       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x000007ee                __fp_split3
-                0x000007fe                __fp_splitA
+                0x000007fc       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x000007fc                __fp_split3
+                0x0000080c                __fp_splitA
  .text.avr-libc.fplib
-                0x00000832        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00000832                __fp_zero
-                0x00000834                __fp_szero
+                0x00000840        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00000840                __fp_zero
+                0x00000842                __fp_szero
  .text.avr-libc
-                0x00000840      0x6f6 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
-                0x00000840                vfprintf
+                0x0000084e      0x6f6 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libprintf_flt.a(vfprintf_flt.o)
+                0x0000084e                vfprintf
  .text._ZN11TinyGPSPlusC2Ev
-                0x00000f36      0x124 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x00000f36                _ZN11TinyGPSPlusC2Ev
-                0x00000f36                _ZN11TinyGPSPlusC1Ev
+                0x00000f44      0x124 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00000f44                _ZN11TinyGPSPlusC2Ev
+                0x00000f44                _ZN11TinyGPSPlusC1Ev
  .text._ZN11TinyGPSPlus7fromHexEc
-                0x0000105a       0x2a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x0000105a                _ZN11TinyGPSPlus7fromHexEc
+                0x00001068       0x2a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001068                _ZN11TinyGPSPlus7fromHexEc
  .text._ZN11TinyGPSPlus12parseDecimalEPKc
-                0x00001084       0xd6 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x00001084                _ZN11TinyGPSPlus12parseDecimalEPKc
+                0x00001092       0xd6 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001092                _ZN11TinyGPSPlus12parseDecimalEPKc
  .text._ZN11TinyGPSPlus12parseDegreesEPKcR10RawDegrees
-                0x0000115a      0x134 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x0000115a                _ZN11TinyGPSPlus12parseDegreesEPKcR10RawDegrees
+                0x00001168      0x134 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001168                _ZN11TinyGPSPlus12parseDegreesEPKcR10RawDegrees
  .text._ZN15TinyGPSLocation6commitEv
-                0x0000128e       0x2e ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x0000128e                _ZN15TinyGPSLocation6commitEv
+                0x0000129c       0x2e ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x0000129c                _ZN15TinyGPSLocation6commitEv
  .text._ZN15TinyGPSLocation3latEv
-                0x000012bc       0x58 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000012bc                _ZN15TinyGPSLocation3latEv
+                0x000012ca       0x58 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x000012ca                _ZN15TinyGPSLocation3latEv
  .text._ZN15TinyGPSLocation3lngEv
-                0x00001314       0x58 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x00001314                _ZN15TinyGPSLocation3lngEv
+                0x00001322       0x58 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001322                _ZN15TinyGPSLocation3lngEv
  .text._ZN11TinyGPSTime7setTimeEPKc
-                0x0000136c       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x0000136c                _ZN11TinyGPSTime7setTimeEPKc
+                0x0000137a       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x0000137a                _ZN11TinyGPSTime7setTimeEPKc
  .text._ZN11TinyGPSDate7setDateEPKc
-                0x00001386       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x00001386                _ZN11TinyGPSDate7setDateEPKc
+                0x00001394       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001394                _ZN11TinyGPSDate7setDateEPKc
  .text._ZN14TinyGPSDecimal3setEPKc
-                0x000013a0       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000013a0                _ZN14TinyGPSDecimal3setEPKc
+                0x000013ae       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x000013ae                _ZN14TinyGPSDecimal3setEPKc
  .text._ZN14TinyGPSInteger3setEPKc
-                0x000013ba       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000013ba                _ZN14TinyGPSInteger3setEPKc
+                0x000013c8       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x000013c8                _ZN14TinyGPSInteger3setEPKc
  .text._ZN13TinyGPSCustom6commitEv
-                0x000013d4       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000013d4                _ZN13TinyGPSCustom6commitEv
+                0x000013e2       0x1a ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x000013e2                _ZN13TinyGPSCustom6commitEv
  .text._ZN13TinyGPSCustom3setEPKc
-                0x000013ee        0xa ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000013ee                _ZN13TinyGPSCustom3setEPKc
+                0x000013fc        0xa ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x000013fc                _ZN13TinyGPSCustom3setEPKc
  .text._ZN11TinyGPSPlus16endOfTermHandlerEv
-                0x000013f8      0x426 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x000013f8                _ZN11TinyGPSPlus16endOfTermHandlerEv
+                0x00001406      0x426 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x00001406                _ZN11TinyGPSPlus16endOfTermHandlerEv
  .text._ZN11TinyGPSPlus6encodeEc
-                0x0000181e       0xf6 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
-                0x0000181e                _ZN11TinyGPSPlus6encodeEc
+                0x0000182c       0xf6 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+                0x0000182c                _ZN11TinyGPSPlus6encodeEc
  .text.libgcc.mul
-                0x00001914       0x20 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulsi3.o)
-                0x00001914                __mulsi3
+                0x00001922       0x20 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulsi3.o)
+                0x00001922                __mulsi3
  .text.libgcc.div
-                0x00001934       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
-                0x00001934                __udivmodsi4
- .text.libgcc   0x00001978        0xc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
-                0x00001978                __tablejump2__
-                0x0000197c                __tablejump__
+                0x00001942       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_udivmodsi4.o)
+                0x00001942                __udivmodsi4
+ .text.libgcc   0x00001986        0xc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_tablejump.o)
+                0x00001986                __tablejump2__
+                0x0000198a                __tablejump__
  .text.libgcc.mul
-                0x00001984       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
-                0x00001984                __muluhisi3
+                0x00001992       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_muluhisi3.o)
+                0x00001992                __muluhisi3
  .text.libgcc.mul
-                0x0000199a       0x10 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
-                0x0000199a                __mulshisi3
-                0x000019a0                __mulohisi3
+                0x000019a8       0x10 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_mulshisi3.o)
+                0x000019a8                __mulshisi3
+                0x000019ae                __mulohisi3
  .text.libgcc.prologue
-                0x000019aa       0x38 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
-                0x000019aa                __prologue_saves__
+                0x000019b8       0x38 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_prologue.o)
+                0x000019b8                __prologue_saves__
  .text.libgcc.prologue
-                0x000019e2       0x36 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
-                0x000019e2                __epilogue_restores__
+                0x000019f0       0x36 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_epilogue.o)
+                0x000019f0                __epilogue_restores__
  .text.libgcc.mul
-                0x00001a18       0x1e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
-                0x00001a18                __umulhisi3
+                0x00001a26       0x1e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_umulhisi3.o)
+                0x00001a26                __umulhisi3
  .text.avr-libc
-                0x00001a36      0x24e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x00001a36                malloc
-                0x00001b66                free
+                0x00001a44      0x24e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00001a44                malloc
+                0x00001b74                free
  .text.avr-libc
-                0x00001c84       0x4e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(atol.o)
-                0x00001c84                atol
+                0x00001c92       0x4e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(atol.o)
+                0x00001c92                atol
  .text.avr-libc
-                0x00001cd2      0x1b0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
-                0x00001cd2                __ftoa_engine
+                0x00001ce0      0x1b0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ftoa_engine.o)
+                0x00001ce0                __ftoa_engine
  .text.avr-libc
-                0x00001e82       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x00001e82                strnlen_P
+                0x00001e90       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x00001e90                strnlen_P
  .text.avr-libc
-                0x00001e98       0x12 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcmp.o)
-                0x00001e98                strcmp
+                0x00001ea6       0x12 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcmp.o)
+                0x00001ea6                strcmp
  .text.avr-libc
-                0x00001eaa        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy.o)
-                0x00001eaa                strcpy
+                0x00001eb8        0xe c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x00001eb8                strcpy
  .text.avr-libc
-                0x00001eb8       0x1e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncpy.o)
-                0x00001eb8                strncpy
+                0x00001ec6       0x1e c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strncpy.o)
+                0x00001ec6                strncpy
  .text.avr-libc
-                0x00001ed6       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x00001ed6                strnlen
+                0x00001ee4       0x16 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x00001ee4                strnlen
  .text.avr-libc
-                0x00001eec       0x2a c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(mulsi10.o)
-                0x00001eec                __mulsi_const_10
+                0x00001efa       0x2a c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(mulsi10.o)
+                0x00001efa                __mulsi_const_10
  .text.avr-libc
-                0x00001f16       0x64 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x00001f16                fputc
+                0x00001f24       0x64 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x00001f24                fputc
  .text.avr-libc
-                0x00001f7a       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                0x00001f7a                sprintf
+                0x00001f88       0x44 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                0x00001f88                sprintf
  .text.avr-libc
-                0x00001fbe       0xbc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x00001fbe                __ultoa_invert
-                0x0000207a                . = ALIGN (0x2)
+                0x00001fcc       0xbc c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x00001fcc                __ultoa_invert
+                0x00002088                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000207a        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
-                0x0000207a                _exit
-                0x0000207a                exit
+ .fini9         0x00002088        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+                0x00002088                _exit
+                0x00002088                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1012,11 +1012,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000207a        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002088        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000207e                _etext = .
+                0x0000208c                _etext = .
 
-.data           0x00800100       0x9c load address 0x0000207e
+.data           0x00800100       0x9c load address 0x0000208c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5/crtm328p.o
@@ -1108,42 +1108,39 @@ END GROUP
                 0x0080019c                _edata = .
                 0x0080019c                PROVIDE (__data_end, .)
 
-.bss            0x0080019c       0xb7
+.bss            0x0080019c       0xb6
                 0x0080019c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.GPS_timeoutFlag
-                0x0080019c        0x1 GPSDriver.o
-                0x0080019c                GPS_timeoutFlag
  .bss.GPS_tinyGPS
-                0x0080019d       0xad GPSDriver.o
-                0x0080019d                GPS_tinyGPS
+                0x0080019c       0xad GPSDriver.o
+                0x0080019c                GPS_tinyGPS
  .bss.HCSR04_waitFlag
-                0x0080024a        0x1 HCSR04Driver.o
-                0x0080024a                HCSR04_waitFlag
+                0x00800249        0x1 HCSR04Driver.o
+                0x00800249                HCSR04_waitFlag
  .bss.HCSR04_timerOverflowFlag
-                0x0080024b        0x1 HCSR04Driver.o
-                0x0080024b                HCSR04_timerOverflowFlag
+                0x0080024a        0x1 HCSR04Driver.o
+                0x0080024a                HCSR04_timerOverflowFlag
  .bss.HCSR04_measuredTransmitToReceiveTime
-                0x0080024c        0x2 HCSR04Driver.o
-                0x0080024c                HCSR04_measuredTransmitToReceiveTime
+                0x0080024b        0x2 HCSR04Driver.o
+                0x0080024b                HCSR04_measuredTransmitToReceiveTime
  .bss.USART_initializeFlag
-                0x0080024e        0x1 USARTDriver.o
-                0x0080024e                USART_initializeFlag
+                0x0080024d        0x1 USARTDriver.o
+                0x0080024d                USART_initializeFlag
  *(COMMON)
- COMMON         0x0080024f        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
-                0x0080024f                __brkval
-                0x00800251                __flp
-                0x00800253                PROVIDE (__bss_end, .)
-                0x0000207e                __data_load_start = LOADADDR (.data)
-                0x0000211a                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080024e        0x4 c:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1056/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x0080024e                __brkval
+                0x00800250                __flp
+                0x00800252                PROVIDE (__bss_end, .)
+                0x0000208c                __data_load_start = LOADADDR (.data)
+                0x00002128                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800253        0x0
-                0x00800253                PROVIDE (__noinit_start, .)
+.noinit         0x00800252        0x0
+                0x00800252                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800253                PROVIDE (__noinit_end, .)
-                0x00800253                _end = .
-                0x00800253                PROVIDE (__heap_start, .)
+                0x00800252                PROVIDE (__noinit_end, .)
+                0x00800252                _end = .
+                0x00800252                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -1236,79 +1233,79 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x627c
+.debug_info     0x00000000     0x6243
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x1376 GPSDriver.o
- .debug_info    0x00001376      0x2e8 HCSR04Driver.o
- .debug_info    0x0000165e      0x711 LCDDriver.o
- .debug_info    0x00001d6f     0x155a Main.o
- .debug_info    0x000032c9      0x4b5 String.o
- .debug_info    0x0000377e      0x129 TMP36GZDriver.o
- .debug_info    0x000038a7      0x3f5 USARTDriver.o
- .debug_info    0x00003c9c     0x25e0 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_info    0x00000000     0x135c GPSDriver.o
+ .debug_info    0x0000135c      0x2e8 HCSR04Driver.o
+ .debug_info    0x00001644      0x711 LCDDriver.o
+ .debug_info    0x00001d55     0x153b Main.o
+ .debug_info    0x00003290      0x4b5 String.o
+ .debug_info    0x00003745      0x129 TMP36GZDriver.o
+ .debug_info    0x0000386e      0x3f5 USARTDriver.o
+ .debug_info    0x00003c63     0x25e0 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
-.debug_abbrev   0x00000000     0x1724
+.debug_abbrev   0x00000000     0x1716
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x442 GPSDriver.o
- .debug_abbrev  0x00000442      0x179 HCSR04Driver.o
- .debug_abbrev  0x000005bb      0x208 LCDDriver.o
- .debug_abbrev  0x000007c3      0x488 Main.o
- .debug_abbrev  0x00000c4b      0x2aa String.o
- .debug_abbrev  0x00000ef5       0xbc TMP36GZDriver.o
- .debug_abbrev  0x00000fb1      0x24a USARTDriver.o
- .debug_abbrev  0x000011fb      0x529 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_abbrev  0x00000000      0x434 GPSDriver.o
+ .debug_abbrev  0x00000434      0x179 HCSR04Driver.o
+ .debug_abbrev  0x000005ad      0x208 LCDDriver.o
+ .debug_abbrev  0x000007b5      0x488 Main.o
+ .debug_abbrev  0x00000c3d      0x2aa String.o
+ .debug_abbrev  0x00000ee7       0xbc TMP36GZDriver.o
+ .debug_abbrev  0x00000fa3      0x24a USARTDriver.o
+ .debug_abbrev  0x000011ed      0x529 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
-.debug_line     0x00000000     0x10a4
+.debug_line     0x00000000     0x108d
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x163 GPSDriver.o
- .debug_line    0x00000163      0x1cf HCSR04Driver.o
- .debug_line    0x00000332      0x275 LCDDriver.o
- .debug_line    0x000005a7      0x212 Main.o
- .debug_line    0x000007b9      0x1bb String.o
- .debug_line    0x00000974       0xe5 TMP36GZDriver.o
- .debug_line    0x00000a59       0xe9 USARTDriver.o
- .debug_line    0x00000b42      0x562 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_line    0x00000000      0x14b GPSDriver.o
+ .debug_line    0x0000014b      0x1cf HCSR04Driver.o
+ .debug_line    0x0000031a      0x275 LCDDriver.o
+ .debug_line    0x0000058f      0x213 Main.o
+ .debug_line    0x000007a2      0x1bb String.o
+ .debug_line    0x0000095d       0xe5 TMP36GZDriver.o
+ .debug_line    0x00000a42       0xe9 USARTDriver.o
+ .debug_line    0x00000b2b      0x562 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
-.debug_frame    0x00000000      0x978
+.debug_frame    0x00000000      0x964
  *(.debug_frame)
- .debug_frame   0x00000000       0xa8 GPSDriver.o
- .debug_frame   0x000000a8       0xdc HCSR04Driver.o
- .debug_frame   0x00000184      0x118 LCDDriver.o
- .debug_frame   0x0000029c       0x9c Main.o
- .debug_frame   0x00000338       0x94 String.o
- .debug_frame   0x000003cc       0x44 TMP36GZDriver.o
- .debug_frame   0x00000410       0xd8 USARTDriver.o
- .debug_frame   0x000004e8      0x490 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_frame   0x00000000       0x94 GPSDriver.o
+ .debug_frame   0x00000094       0xdc HCSR04Driver.o
+ .debug_frame   0x00000170      0x118 LCDDriver.o
+ .debug_frame   0x00000288       0x9c Main.o
+ .debug_frame   0x00000324       0x94 String.o
+ .debug_frame   0x000003b8       0x44 TMP36GZDriver.o
+ .debug_frame   0x000003fc       0xd8 USARTDriver.o
+ .debug_frame   0x000004d4      0x490 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
-.debug_str      0x00000000     0x17f6
+.debug_str      0x00000000     0x17e4
  *(.debug_str)
- .debug_str     0x00000000      0xf28 GPSDriver.o
-                                0xfb3 (size before relaxing)
- .debug_str     0x00000f28      0x1f0 HCSR04Driver.o
+ .debug_str     0x00000000      0xf16 GPSDriver.o
+                                0xf9b (size before relaxing)
+ .debug_str     0x00000f16      0x1f0 HCSR04Driver.o
                                 0x39a (size before relaxing)
- .debug_str     0x00001118      0x230 LCDDriver.o
+ .debug_str     0x00001106      0x230 LCDDriver.o
                                 0x417 (size before relaxing)
- .debug_str     0x00001348       0x99 Main.o
-                                0xff5 (size before relaxing)
- .debug_str     0x000013e1       0x78 String.o
+ .debug_str     0x00001336       0x99 Main.o
+                                0xfed (size before relaxing)
+ .debug_str     0x000013cf       0x78 String.o
                                 0x30f (size before relaxing)
- .debug_str     0x00001459       0x94 TMP36GZDriver.o
+ .debug_str     0x00001447       0x94 TMP36GZDriver.o
                                 0x253 (size before relaxing)
- .debug_str     0x000014ed      0x115 USARTDriver.o
+ .debug_str     0x000014db      0x115 USARTDriver.o
                                 0x3ee (size before relaxing)
- .debug_str     0x00001602      0x1f4 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_str     0x000015f0      0x1f4 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
                                 0xef7 (size before relaxing)
 
-.debug_loc      0x00000000     0x27cb
+.debug_loc      0x00000000     0x2821
  *(.debug_loc)
- .debug_loc     0x00000000      0x176 GPSDriver.o
- .debug_loc     0x00000176      0x270 HCSR04Driver.o
- .debug_loc     0x000003e6      0x2e3 LCDDriver.o
- .debug_loc     0x000006c9      0x138 Main.o
- .debug_loc     0x00000801       0xd4 String.o
- .debug_loc     0x000008d5       0xbc TMP36GZDriver.o
- .debug_loc     0x00000991      0x21c USARTDriver.o
- .debug_loc     0x00000bad     0x1c1e ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_loc     0x00000000      0x1cc GPSDriver.o
+ .debug_loc     0x000001cc      0x270 HCSR04Driver.o
+ .debug_loc     0x0000043c      0x2e3 LCDDriver.o
+ .debug_loc     0x0000071f      0x138 Main.o
+ .debug_loc     0x00000857       0xd4 String.o
+ .debug_loc     0x0000092b       0xbc TMP36GZDriver.o
+ .debug_loc     0x000009e7      0x21c USARTDriver.o
+ .debug_loc     0x00000c03     0x1c1e ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1328,16 +1325,16 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x310
+.debug_ranges   0x00000000      0x2f0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x50 GPSDriver.o
- .debug_ranges  0x00000050       0x40 HCSR04Driver.o
- .debug_ranges  0x00000090       0x70 LCDDriver.o
- .debug_ranges  0x00000100       0x48 Main.o
- .debug_ranges  0x00000148       0x40 String.o
- .debug_ranges  0x00000188       0x20 TMP36GZDriver.o
- .debug_ranges  0x000001a8       0x40 USARTDriver.o
- .debug_ranges  0x000001e8      0x128 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
+ .debug_ranges  0x00000000       0x30 GPSDriver.o
+ .debug_ranges  0x00000030       0x40 HCSR04Driver.o
+ .debug_ranges  0x00000070       0x70 LCDDriver.o
+ .debug_ranges  0x000000e0       0x48 Main.o
+ .debug_ranges  0x00000128       0x40 String.o
+ .debug_ranges  0x00000168       0x20 TMP36GZDriver.o
+ .debug_ranges  0x00000188       0x40 USARTDriver.o
+ .debug_ranges  0x000001c8      0x128 ../Libraries\libTinyGPSForAVR.a(TinyGPS++.o)
 
 .debug_macro
  *(.debug_macro)

@@ -14,7 +14,6 @@ struct GPSCoordinate
 {
   float m_latitude;
   float m_longitude;
-  bool m_valid;
 };
 
 GPSCoordinate GPS_GetCoordinate();
