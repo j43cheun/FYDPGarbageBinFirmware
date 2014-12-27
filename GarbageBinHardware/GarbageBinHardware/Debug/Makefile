@@ -36,6 +36,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../GPSDriver.cpp \
 ../HCSR04Driver.cpp \
 ../LCDDriver.cpp \
 ../Main.cpp \
@@ -51,6 +52,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+GPSDriver.o \
 HCSR04Driver.o \
 LCDDriver.o \
 Main.o \
@@ -59,6 +61,7 @@ TMP36GZDriver.o \
 USARTDriver.o
 
 OBJS_AS_ARGS +=  \
+GPSDriver.o \
 HCSR04Driver.o \
 LCDDriver.o \
 Main.o \
@@ -67,6 +70,7 @@ TMP36GZDriver.o \
 USARTDriver.o
 
 C_DEPS +=  \
+GPSDriver.d \
 HCSR04Driver.d \
 LCDDriver.d \
 Main.d \
@@ -75,6 +79,7 @@ TMP36GZDriver.d \
 USARTDriver.d
 
 C_DEPS_AS_ARGS +=  \
+GPSDriver.d \
 HCSR04Driver.d \
 LCDDriver.d \
 Main.d \
@@ -106,10 +111,12 @@ LIB_DEP+=
 
 
 
+
+
 ./%.o: .././%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 4.8.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../Libraries"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
@@ -138,7 +145,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP)
 	@echo Building target: $@
 	@echo Invoking: AVR8/GNU Linker : 4.8.1
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="GarbageBinHardware.map" -Wl,-u,vfprintf -Wl,--start-group -Wl,-lm -Wl,-lprintf_flt -Wl,-lscanf_flt  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega328p  
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="GarbageBinHardware.map" -Wl,-u,vfprintf -Wl,--start-group -Wl,-lm -Wl,-lprintf_flt -Wl,-lscanf_flt -Wl,-lTinyGPSForAVR  -Wl,--end-group -Wl,-L"../Libraries"  -Wl,--gc-sections -mmcu=atmega328p  
 	@echo Finished building target: $@
 	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "GarbageBinHardware.elf" "GarbageBinHardware.hex"
 	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1056\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "GarbageBinHardware.elf" "GarbageBinHardware.eep" || exit 0

@@ -20,11 +20,11 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
-    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
         <options />
@@ -73,6 +73,12 @@
             <Value>libm</Value>
           </ListValues>
         </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>C:\Users\Justin\Git\Workspaces\garbagebinhardware\GarbageBinHardware\lib</Value>
+            <Value>C:\Users\Justin\Git\Workspaces\garbagebinhardware\GarbageBinHardware\GarbageBinHardware\Libraries</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
       </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
@@ -103,6 +109,11 @@
             <Value>DEBUG</Value>
           </ListValues>
         </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../Libraries</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
         <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
         <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
         <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
@@ -114,14 +125,26 @@
             <Value>libm</Value>
             <Value>printf_flt</Value>
             <Value>scanf_flt</Value>
+            <Value>libTinyGPSForAVR.a</Value>
           </ListValues>
         </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../Libraries</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.LibrarySearchPaths>
         <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
       </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPSDriver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPSDriver.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HCSR04Driver.cpp">
@@ -145,6 +168,9 @@
     <Compile Include="String.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="TinyGPS++.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="TMP36GZDriver.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -157,6 +183,11 @@
     <Compile Include="USARTDriver.h">
       <SubType>compile</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libTinyGPSForAVR.a">
+      <SubType>compile</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

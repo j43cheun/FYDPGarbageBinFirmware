@@ -17,6 +17,6 @@ unsigned char USART_ReadByte( void );
 unsigned char USART_ReceiveByte( void );
 String USART_ReceiveString( unsigned char terminator, unsigned terminationCount );
 void USART_SendByte( unsigned char data );
-void USART_SendString( char* stringPtr );
+void USART_SendString( const char* stringPtr );
 
 #endif /* USARTDRIVER_H_ */

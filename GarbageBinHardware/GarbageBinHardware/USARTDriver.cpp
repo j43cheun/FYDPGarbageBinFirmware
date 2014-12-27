@@ -13,12 +13,18 @@
 #define BAUDRATE       9600
 #define BAUD_PRESCALER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
+volatile bool USART_initializeFlag = false;
+
 void USART_Init( void )
 {
-  UBRR0H = ( BAUD_PRESCALER >> 8 );
-  UBRR0L = ( BAUD_PRESCALER );
-  UCSR0B |= ( 1 << RXEN0 ) | ( 1 << TXEN0 );
-  UCSR0C |= ( 1 << UCSZ00 ) | ( 1 << UCSZ01 );
+  if( !USART_initializeFlag )
+  {
+    UBRR0H = ( BAUD_PRESCALER >> 8 );
+    UBRR0L = ( BAUD_PRESCALER );
+    UCSR0B |= ( 1 << RXEN0 ) | ( 1 << TXEN0 );
+    UCSR0C |= ( 1 << UCSZ00 ) | ( 1 << UCSZ01 );
+    USART_initializeFlag = true;
+  }
 }
 
 bool USART_ByteAvailable()
@@ -65,7 +71,7 @@ void USART_SendByte( unsigned char data )
   UDR0 = data;
 }
 
-void USART_SendString( char* stringPtr )
+void USART_SendString( const char* stringPtr )
 {
   while( *stringPtr != 0x00 )
   {
